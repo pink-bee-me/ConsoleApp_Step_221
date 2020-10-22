@@ -10,15 +10,23 @@ namespace ConsoleApp_Step_221
 {
     class US_StateSide_Terrorism
     {
-
-
-
-
-        public static void TerroristEvent()
+        public void GetInfo()
         {
-            Console.WriteLine(
-                "Do You Know The Year in Which Each of These Acts of Terror Occurred? Do You Know How Old You Were? Let's figure it out !!!\n Enter the year that you were born (example... 1971):");
-            int yourDOB = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" \n\n Enter Your First Name: ");
+            string firstName = Console.ReadLine();
+
+            Console.WriteLine("\n Enter Your Last Name: ");
+            string lastName = Console.ReadLine();
+
+            Console.WriteLine("\n Enter The Year You Were Born: ");
+            string yourDob = Console.ReadLine();
+
+        }
+
+
+
+        public void TerroristEvent()
+        {
             Console.WriteLine(
                 "Choose An Event... \n Press 1 : Oklahoma City Bombing / Alfred P. Murrah Federal Building \n" +
                 " Perpetrators: Timothy McVeigh, Terry Nichols \n" +
@@ -31,7 +39,7 @@ namespace ConsoleApp_Step_221
 
             int EventPick = Convert.ToInt32(Console.ReadLine());
 
-            YourAge(YourDOB,EventPick);
+            YourAge(User.yourDob,EventPick);
 
         }
 
